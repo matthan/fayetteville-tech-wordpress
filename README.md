@@ -1,6 +1,8 @@
 # Fayetteville Technical Community College: WordPress Site
 
-This is a custom WordPress theme and site build for [Fayetteville Technical Community College](https://www.faytechcc.edu) (FTCC), one of the largest community colleges in North Carolina. I built it at **Walk West** in Raleigh, NC. The site serves current and prospective students, military and veteran learners, high school dual-enrollment students and the wider community. It is hosted on [Pantheon](https://pantheon.io).
+This is a custom WordPress theme and site build for Fayetteville Technical Community College (FTCC), one of the largest community colleges in North Carolina. I built it at **Walk West** in Raleigh, NC. The site serves current and prospective students, military and veteran learners, high school dual-enrollment students and the wider community.
+
+The site was built for many campus departments to manage their own content. A central moderation system gives each section of the site its own roles and permissions. Editors create and update pages as drafts, which then go through review and are passed to the right people for approval and publishing.
 
 | Homepage | Interior page: High School Connections |
 |:---:|:---:|
