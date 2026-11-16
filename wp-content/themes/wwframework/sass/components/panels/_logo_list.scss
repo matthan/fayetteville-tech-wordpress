@@ -1,0 +1,27 @@
+/*-------------------------------------------------------------------------------------------*/
+/* LOGO LIST PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-logo-list {
+
+    .logo-list {
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        @include breakpoint($phablet) {
+            margin-top: 45px;
+        }
+
+        .col {
+            display: flex;
+            min-height: 150px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+
+            img {
+                max-width: 130px;
+            }
+        }
+    }
+}

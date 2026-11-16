@@ -1,0 +1,42 @@
+/*-------------------------------------------------------------------------------------------*/
+/* CREDIT TRANSFER TOOL PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-credit-transfer-tool {
+
+    .mcs-iframe {
+        width: 100%;
+        height: 540px;
+    }
+
+    .ctt-wrap {
+        position: relative;
+    }
+
+    .box-outline {
+        @include breakpoint($desktop) {
+            position: absolute;
+            top: 15px;
+            bottom: -15px;
+            border: 10px solid palette(black);
+
+            &.direction-right {
+                left: -60px;
+                right: -100vw;
+
+                &:before {
+                    left: 200px;
+                }
+            }
+
+            &.direction-left {
+                right: -60px;
+                left: -100vw;
+
+                &:before {
+                    right: 200px;
+                }
+            }
+        }
+    }
+}

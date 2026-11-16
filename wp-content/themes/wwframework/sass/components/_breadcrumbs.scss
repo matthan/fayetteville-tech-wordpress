@@ -1,0 +1,31 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BREADCRUMBS */
+/*-------------------------------------------------------------------------------------------*/
+
+.breadcrumbs {
+    background-color: palette(grey, lighter);
+    padding: 12px 0;
+
+    .breadcrumb-trail {
+        max-width: $tablet;
+        margin: 0 auto;
+        padding: 0 $gutter;
+        font-size: calcRem(12);
+
+        .sep {
+
+            span {
+                transform: rotate(90deg);
+                display: inline-block;
+                font-size: calcRem(13);
+            }
+            span:nth-child(2) {
+                margin-left: -3px;
+            }
+        }
+    }
+
+    .trail-end {
+        color: palette(grey, dark);
+    }
+}

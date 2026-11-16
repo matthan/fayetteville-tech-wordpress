@@ -1,0 +1,23 @@
+// Web fonts
+@mixin font-face($family, $file, $weight, $style) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$path-font}/#{$file}-webfont.woff2') format('woff2'),
+        url('#{$path-font}/#{$file}-webfont.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+// Text
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+    font-size: $size;
+    line-height: $l-height;
+    font-weight: $weight;
+    color: $color;
+}
+
+@function calcRem($size) {
+    $remSize: $size / $base-font-size;
+    @return #{$remSize}rem;
+}

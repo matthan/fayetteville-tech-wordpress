@@ -1,0 +1,15 @@
+.panel-blog-feed-teaser {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include breakpoint($desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .teaser {
+    @include breakpoint($tablet) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+body#tinymce.wp-editor {
+    font-size: 16px;
+    line-height: 29px;
+}
+
+body#tinymce.wp-editor h1 {
+    font-size: 38px;
+    line-height: 58px;
+    margin-top: 58px;
+    margin-bottom: 29px;
+}
+
+body#tinymce.wp-editor h2 {
+    font-size: 28px;
+    line-height: 29px;
+    margin-top: 58px;
+    margin-bottom: 29px;
+}
+
+body#tinymce.wp-editor h1:first-child {
+    margin-top: 0px;
+}
+
+body#tinymce.wp-editor h2:first-child {
+    margin-top: 0px;
+}
+
+body#tinymce.wp-editor h3 {
+    font-size: 21px;
+    line-height: 29px;
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+
+body#tinymce.wp-editor h4,
+body#tinymce.wp-editor h5,
+body#tinymce.wp-editor h6 {
+    font-size: 16px;
+    line-height: 29px;
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+
+body#tinymce.wp-editor p,
+body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
+body#tinymce.wp-editor pre,
+body#tinymce.wp-editor table,
+body#tinymce.wp-editor blockquote {
+    margin-top: 29px;
+    margin-bottom: 29px;
+}
+
+/* Sanitation */
+body#tinymce.wp-editor hr {
+    border: 1px solid;
+    margin: -1px 0;
+}
+
+body#tinymce.wp-editor ul ul,
+body#tinymce.wp-editor ol ol,
+body#tinymce.wp-editor ul ol,
+body#tinymce.wp-editor ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body#tinymce.wp-editor b,
+body#tinymce.wp-editor strong,
+body#tinymce.wp-editor em,
+body#tinymce.wp-editor small,
+body#tinymce.wp-editor code {
+    line-height: 1;
+}
+
+body#tinymce.wp-editor sup,
+body#tinymce.wp-editor sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+body#tinymce.wp-editor sub {
+    top: 0.4em;
+}
+
+body#tinymce.wp-editor .wp-caption,
+body#tinymce.wp-editor .wp-caption img,
+body#tinymce.wp-editor img {
+    max-width: 100% !important;
+    display: block;
+    height: auto;
+}

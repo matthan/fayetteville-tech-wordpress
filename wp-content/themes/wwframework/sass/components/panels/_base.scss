@@ -1,0 +1,119 @@
+/*-------------------------------------------------------------------------------------------*/
+/* PANELS */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel {
+    padding: $panel-margin-vertical-mobile 0;
+    overflow: hidden;
+
+    @include breakpoint($phablet) {
+        padding: $panel-margin-vertical-phablet 0;
+    }
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 $gutter;
+
+    @include breakpoint($phablet) {
+        flex-wrap: nowrap;
+    }
+}
+
+.col-25,
+.col-30,
+.col-33,
+.col-40,
+.col-50,
+.col-60,
+.col-66,
+.col-70,
+.col-75,
+.col-100 {
+    position: relative;
+}
+
+.col-25 {
+    width: 48%; //4% gutters
+
+    @include breakpoint($phablet) {
+        width: 30.66%; //4% gutters
+    }
+
+    @include breakpoint($tablet) {
+        width: 22%; //4% gutters
+    }
+}
+.col-30 {
+    width: 48%; //4% gutters
+
+    @include breakpoint($phablet) {
+        width: 32.66%; //4% gutters
+    }
+
+    @include breakpoint($tablet) {
+        width: 27%; //4% gutters
+    }
+}
+.col-33 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 30.66%; //4% gutters
+    }
+}
+.col-40 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 38%; //4% gutters when paired with col-60
+    }
+}
+.col-50 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 48%; //4% gutters
+    }
+}
+.col-60 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 58%; //4% gutters when paired with col-40
+    }
+}
+.col-66 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 61.33%; //4% gutters
+    }
+}
+.col-70 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 63.33%; //4% gutters
+    }
+
+    @include breakpoint($tablet) {
+        width: 69%; //4% gutters when paired with col-25
+    }
+}
+.col-75 {
+    width: 100%;
+
+    @include breakpoint($phablet) {
+        width: 61.33%; //4% gutters
+    }
+
+    @include breakpoint($tablet) {
+        width: 74%; //4% gutters when paired with col-25
+    }
+}
+.col-100 {
+    width: 100%;
+}

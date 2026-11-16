@@ -1,0 +1,117 @@
+/*-------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*-------------------------------------------------------------------------------------------*/
+
+#footer {
+    position: relative;
+    color: palette(white);
+    background-color: palette(black);
+    z-index: z(2);
+}
+
+.footer-top {
+    display: flex;
+    padding: 45px 15px 30px 15px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint($phablet) {
+        flex-wrap: nowrap;
+        padding: 70px 0 60px 0;
+    }
+
+    .footer-logos {
+        //flex: 1;
+        width: 100%;
+        text-align: center;
+        //margin: 0 auto;
+
+        .fayettevilletech-seal {
+            max-width: 120px;
+            margin-bottom: 30px;
+            height: auto;
+
+            @include breakpoint($phablet) {
+                max-width: 240px;
+                text-align: left;
+            }
+        }
+
+        @include breakpoint($phablet) {
+            width: 32%;
+        }
+    }
+    .footer-menus {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .footer-menu {
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: center;
+
+            .footer-menu-heading {
+                margin-bottom: 10px;
+                padding-bottom: 2px;
+                font-family: $display-font;
+                weight: 700;
+                border-bottom: 1px solid palette(white);
+            }
+
+            @include breakpoint($phablet) {
+                width: 31%;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        @include breakpoint($phablet) {
+            flex-wrap: nowrap;
+            width: 64%;
+        }
+    }
+}
+
+.nav-footer {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        display: block;
+
+        a {
+            color: palette(white);
+            font-size: 14px;
+
+            &:hover,
+            &:focus {
+                color: palette(grey);
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 30px 0;
+    border-top: 1px solid palette(white);
+
+    .copyright {
+        font-size: calcRem(14);
+        text-align: center;
+    }
+    .social {
+        margin: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: palette(white);
+            }
+        }
+    }
+}

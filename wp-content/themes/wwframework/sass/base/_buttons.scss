@@ -1,0 +1,87 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BUTTONS */
+/*-------------------------------------------------------------------------------------------*/
+
+// Use background instead of background-color everywhere to avoid gradient hover issue for main a tags
+button {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+%btn,
+.btn,
+a.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 10px 10px 0;
+    padding: 12px 32px 10px 32px;
+    color: palette(black);
+    font-family: $display-font-alt;
+    font-weight: 700;
+    font-size: calcRem(14);
+    line-height: calcRem(18);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 0;
+    background: palette(yellow);
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-user-select: none;
+    transition: color $duration ease-in-out, background $duration ease-in-out, background-color $duration ease-in-out; // Use background and background-color to cover all scenarios
+
+    .bg-yellow & {
+        background: palette(white);
+    }
+    &.white {
+        color: palette(black);
+        background: palette(white);
+    }
+    &.blue {
+        color: palette(white);
+        background: palette(blue);
+
+        &:hover {
+            color: palette(black);
+            background: palette(yellow);
+        }
+    }
+
+    &:hover,
+    &:hover a {
+        color: palette(white);
+        background: palette(black);
+    }
+}
+
+.btn a {
+    color: palette(black);
+    background: transparent !important;
+    transition: color $duration ease-in-out, background $duration ease-in-out, background-color $duration ease-in-out; // Use background and background-color to cover all scenarios
+
+    &:hover {
+        color: palette(white);
+        background: transparent !important;
+    }
+}
+
+%btn-shadow,
+.btn-shadow {
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+}
+.btn-float-right {
+    float: right;
+}
+.btn-center {
+    text-align: center;
+}
+.btn-overlap {
+    margin-top: 0;
+    margin-right: 10%;
+}

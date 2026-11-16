@@ -1,0 +1,83 @@
+// NEW: Sass color map
+// When cloning to new site, update color map to most closely reflect primary colors and lighter/darker shades of said colors
+// This will be especially easy when we begin receiving style guides
+// Naming conventions within single color, in order:
+// lightest, lighter, light, base, dark, darker, darkest
+$COLORS: (
+    blue: (
+        base: #203e5a,
+        dark: #22f3eb,
+    ),
+    yellow: (
+        base: #f8e71c,
+        dark: #e6c800,
+    ),
+    red: (
+        base: #ab0b3e,
+    ),
+    purple: (
+        base: #800080,
+    ),
+    grey: (
+        lighter: #f2f2f2,
+        light: #f2f2f2,
+        base: #9b9b9b,
+        dark: #4a4a4a,
+        darker: #222,
+    ),
+    white: (
+        //base: #fdfdfd, // Use slightly off-white/off-black, more natural and easier on the eyes
+        base: #fff,
+        pure: #fff,
+    ),
+    black: (
+        //base: #020202,
+        base: #000,
+        pure: #000,
+    ),
+);
+
+// Palette color map retrieval function
+@function palette($color, $shade: base) { // Default shade: base
+    // Return warning if color is invalid
+    @if not map-has-key($COLORS, $color) {
+        @warn "There is no color mapped to '#{$color}'";
+        @return null;
+    }
+
+    // Grab shade map for given color
+    $color-map: map-get($COLORS, $color);
+    // Return warning if shade is invalid
+    @if not map-has-key($color-map, $shade) {
+        @warn "There is no '#{$shade}' for the color '#{$color}'";
+        @return null;
+    }
+
+    // Return the proper shade
+    @return map-get($color-map, $shade);
+}
+
+// Functional color variables
+$color-text: palette(black);
+$color-accent: palette(blue);
+
+$color-highlight: palette(yellow);
+
+$color-link: palette(black);
+$color-link-hover: palette(grey, darker);
+$color-link-visited: palette(blue);
+
+$color-form-text: palette(grey);
+$color-form-placeholder: palette(grey);
+$color-form-required: palette(grey);
+$color-form-border: palette(grey);
+$color-form-disabled: palette(grey, light);
+$color-form-error: palette(red);
+
+$color-shadow: rgba(palette(black), .4);
+$color-body: palette(white);
+
+// Social Media
+$color-facebook: #3b5998;
+$color-twitter: #00aced;
+$color-linkedin: #007bb6;

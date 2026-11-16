@@ -1,0 +1,71 @@
+.panel-news-events-feed-teaser {
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    @include breakpoint($desktop) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .feed-header {
+        margin-bottom: 0;
+    }
+
+    .row-feeds {
+        justify-content: center;
+        padding: 0;
+
+        @include breakpoint($phablet) {
+            justify-content: space-between;
+        }
+    }
+
+    .feed-wrap-events,
+    .feed-wrap-news, {
+        width: 100%;
+        max-width: 420px;
+
+        @include breakpoint($phablet) {
+            width: 48%;
+        }
+    }
+
+    .feed-wrap-sports-news {
+        width: 100%;
+    }
+
+    .feed-wrap-events {
+        margin-bottom: 60px;
+
+        @include breakpoint($phablet) {
+            margin-bottom: 0;
+        }
+    }
+
+    .teaser-event .teaser-date,
+    .teaser-news .teaser-date {
+        width: 8%;
+
+        @include breakpoint($phablet) {
+            width: 10%;
+        }
+
+        .the-month {
+            line-height: calcRem(16);
+        }
+    }
+    .teaser-event .teaser-title,
+    .teaser-news .teaser-header {
+        width: 84%;
+
+        @include breakpoint($phablet) {
+            width: 84%;
+        }
+    }
+
+    .teaser {
+        @include breakpoint($tablet) {
+            margin-bottom: 0;
+        }
+    }
+}

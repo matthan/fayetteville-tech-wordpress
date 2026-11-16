@@ -1,0 +1,22 @@
+// Add styling variables that pertain to specific sub-sections/components of your site here, with a comment above each independent sub-section
+// Example:
+
+// Layout Variables
+$header-height: 68px;
+
+// Panel Variables
+$panel-margin-vertical-mobile: 60px;
+$panel-margin-vertical-phablet: 75px;
+
+// Post Type variables
+$teaser-blog-max-width: 400px;
+
+// Gradients
+@mixin gradient-partial($size, $direction, $color-start, $color-end) {
+    background: linear-gradient(to $direction, $color-start calc( (#{$size} * 1%) + 485px ), $color-end calc( (#{$size} * 1%) + 485px ));
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        background: $color-start;
+    }
+}
+
+$box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .15);

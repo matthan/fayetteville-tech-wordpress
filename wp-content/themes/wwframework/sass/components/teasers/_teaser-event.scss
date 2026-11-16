@@ -1,0 +1,55 @@
+.teaser-event {
+  padding-top: 17px !important;
+  padding-bottom: 14px !important;
+  border-bottom: 2px solid palette(black);
+
+  .teaser-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    font-family: $display-font-alt;
+    text-align: center;
+
+    @include breakpoint($phablet) {
+      width: 7%;
+    }
+
+    .the-day {
+      display: block;
+      font-size: calcRem(32);
+      line-height: calcRem(32);
+      font-weight: 400;
+    }
+    .the-month {
+      display: block;
+      font-size: calcRem(16);
+      font-weight: 700;
+      line-height: calcRem(26);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  .teaser-title {
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    width: 86%;
+
+    @include breakpoint($phablet) {
+      width: 89%;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: calcRem(16);
+      font-weight: 400;
+      line-height: calcRem(22);
+
+      @include breakpoint($phablet) {
+        font-size: calcRem(18);
+        line-height: calcRem(24);
+      }
+    }
+  }
+}

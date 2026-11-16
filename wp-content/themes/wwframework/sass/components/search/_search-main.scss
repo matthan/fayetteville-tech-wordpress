@@ -1,0 +1,15 @@
+.search-form-main {
+  input[type="text"] {
+    max-width: 400px;
+    border-color: palette(black);
+    color: palette(black);
+  }
+
+  .submit-wrap {
+    background-color: palette(black);
+  }
+
+  .icon-search {
+    color: palette(white);
+  }
+}

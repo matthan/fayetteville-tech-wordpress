@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BASE */
+/*-------------------------------------------------------------------------------------------*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    color: palette(black);
+    font-family: $body-font;
+    font-size: ($base-font-size * 1px);
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: palette(white);
+}
+
+.container {
+    max-width: $tablet;
+    width: 100%;
+    margin: 0 auto;
+}
+.container-lg {
+    max-width: $desktop;
+    width: 100%;
+    margin: 0 auto;
+}
+.container-fullscreen {
+    max-width: 100%;
+}
+
+.hide-for-mobile {
+    display: inline-block;
+}
+
+.show-for-mobile {
+    display: none;
+    padding: 30px;
+}
+
+@media (max-width: 767px) {
+    .hide-for-mobile {
+        display: none;
+    }
+
+    .show-for-mobile {
+        display: inline-block;
+    }
+}

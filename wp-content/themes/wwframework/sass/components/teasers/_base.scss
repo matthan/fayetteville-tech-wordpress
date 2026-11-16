@@ -1,0 +1,12 @@
+.teaser {
+    .url {
+        //transition: background-color $duration;
+        text-decoration: underline;
+
+        &:hover {
+            //color: palette(grey);
+            background-color: none;
+            text-decoration: none;
+        }
+    }
+}

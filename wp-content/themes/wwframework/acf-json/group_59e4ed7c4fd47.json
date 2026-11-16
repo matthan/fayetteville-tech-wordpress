@@ -1,0 +1,41 @@
+{
+    "key": "group_59e4ed7c4fd47",
+    "title": "Panel - Persona Filter",
+    "fields": [
+        {
+            "key": "field_59e4ed8b5eeb7",
+            "label": "Persona Filter",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "No fields necessary – panel will display a persona filter, allowing users to enter their identity and a topic they are interested in order to be directed to the most relevant page for each use-case.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1508175553
+}

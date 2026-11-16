@@ -1,0 +1,30 @@
+/*-------------------------------------------------------------------------------------------*/
+/* DOUBLE CALLOUT PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-double-callout {
+
+    .callout {
+        padding: 25px 30px 20px 30px;
+        margin-bottom: 15px;
+        box-shadow: $box-shadow;
+
+        @include breakpoint($phablet) {
+            padding: 50px 60px 45px 60px;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            padding-top: 25px;
+            border-top: 8px solid palette(yellow);
+
+            h3 {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

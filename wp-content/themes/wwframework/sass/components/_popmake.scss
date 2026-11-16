@@ -1,0 +1,36 @@
+/* Popup Styling */
+.popmake {
+    background-color: #ebebeb !important; }
+
+.popmake.responsive {
+    max-width: 80% !important; }
+
+.popmake div.btn-div {
+    display: inline-block;
+    margin-bottom: 10px; }
+
+.popmake div.btn-div a {
+    white-space: normal;
+    background-color: #dbb811 !important;
+    color: #464646 !important; }
+
+.popmake div.btn-div a:hover {
+    background: transparent !important;
+    color: #dbb811 !important; }
+
+.popmake-title {
+    text-align: center !important;
+    padding: 30px 15px; }
+
+.popmake-content {
+    text-align: center; }
+
+.popmake-content hr {
+    border-color: #dddddd; }
+
+.popmake-overlay.theme-default-theme {
+    background-color: #000000 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important; }
+
+.popmake.theme-default-theme > .popmake-close {
+    background-color: #DBB811 !important; }

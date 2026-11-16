@@ -1,0 +1,30 @@
+{
+  "name": "WWFramework",
+  "description": "JS/CSS Libraries for Walk West Framework",
+  "main": "",
+  "authors": [
+    "Ryan Scotton"
+  ],
+  "license": "NONE",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexslider": "^2.6.1",
+    "gsap": "greensock-js#^1.10.2",
+    "remodal": "^1.1.0",
+    "scrollmagic": "^2.0.5",
+    "skrollr": "^0.6.30",
+    "breakpoint-sass": "^2.7.0",
+    "featherlight": "^1.7.2",
+    "js-cookie": "^2.1.4",
+    "slick-carousel": "^1.8.1",
+    "fancybox": "^3.1.25"
+  }
+}

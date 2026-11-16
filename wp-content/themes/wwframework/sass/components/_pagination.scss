@@ -1,0 +1,25 @@
+.ww-pagination {
+  margin: 50px 0;
+  text-align: center;
+
+  .page-numbers {
+    @extend %btn-shadow;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 36px;
+    min-height: 36px;
+    line-height: 1;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color $duration;
+
+    &.current,
+    &:hover {
+      background-color: palette(yellow);
+    }
+
+    + .page-numbers {
+      margin-left: 12px;
+    }
+  }
+}

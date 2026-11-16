@@ -1,0 +1,184 @@
+.panel-success-story-feature {
+    margin-top: 0;
+
+    header {
+        padding: $panel-margin-vertical-mobile 0;
+        background-color: palette(yellow);
+        @include gradient-partial(55, right, palette(yellow), palette(white));
+
+        @include breakpoint($phablet) {
+            padding: $panel-margin-vertical-phablet 0;
+        }
+    }
+
+    .stories-wrap {
+        position: relative;
+    }
+
+    .stories {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .story {
+        @include breakpoint($phablet) {
+            display: flex;
+            align-items: stretch;
+            height: 450px;
+        }
+
+        @include breakpoint($desktop) {
+            height: 600px;
+        }
+    }
+
+    .story-image-wrap {
+        img {
+            width: 100%;
+
+            @include breakpoint($phablet) {
+                //height: 100%;
+                //width: auto;
+                //min-width: 100%; // Take this off once proper image style is defined for this context
+                //max-width: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @include breakpoint($phablet) {
+            position: relative;
+            overflow: hidden;
+            min-width: 50%;
+            max-width: 50%;
+        }
+
+        @include breakpoint($desktop) {
+            min-width: 60%;
+            max-width: 60%;
+        }
+    }
+
+    .story-content-wrap {
+        padding: 40px $gutter;
+
+        .flex-wrap {
+            @include clearfix;
+        }
+
+        @include breakpoint($phablet) {
+            display: flex;
+            align-items: center;
+            min-width: 50%;
+            max-width: 50%;
+
+            .btn {
+                margin: 10px 0 0;
+            }
+        }
+
+        @include breakpoint($desktop) {
+            min-width: 40%;
+            max-width: 40%;
+            padding-left: 40px;
+            padding-right: 40px;
+
+            .btn {
+                float: right;
+            }
+        }
+    }
+
+    .pager-arrows,
+    .pager-dots {
+        padding: 0 $gutter;
+    }
+
+    .pager-arrows {
+        padding: 20px $gutter;
+
+        @include breakpoint($phablet) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        @include breakpoint($desktop) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            button + button {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .pager-dots {
+        display: none;
+
+    }
+
+    .thumbnails {
+        display: none;
+
+        @include breakpoint($phablet) {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            margin: 0;
+            padding: 0;
+
+            li {
+                @include bg-overlay(rgba(palette(black), .4));
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+
+                &:before {
+                    transition: background $duration;
+                }
+
+                &:hover:before,
+                &.active:before {
+                    background: transparent;
+                }
+            }
+        }
+
+        @include breakpoint($desktop) {
+            right: 40%;
+
+            li {
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
+
+    &.style-dark {
+        .stories-wrap {
+            background-color: palette(black);
+            color: palette(white);
+
+            .btn:hover {
+                background-color: palette(white);
+                color: palette(black);
+            }
+        }
+
+        .pager-dots,
+        .pager-arrows {
+            button {
+                color: palette(white);
+            }
+        }
+    }
+}

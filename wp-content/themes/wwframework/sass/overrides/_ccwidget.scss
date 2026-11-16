@@ -1,0 +1,25 @@
+/*-------------------------------------------------------------------------------------------*/
+/* CC WIDGET OVERRIDES */
+/*-------------------------------------------------------------------------------------------*/
+
+.cc-card {
+	height: auto !important;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	
+	.play-pause-button {
+		display: none;
+	}
+	.cc-content {
+		margin-top: 0;
+	}
+	.cc-content-title {
+		margin: 0;
+	}
+	.cc-content-salary {
+		margin-bottom: 10px;
+	}
+	.footer {
+		display: none;
+	}
+}

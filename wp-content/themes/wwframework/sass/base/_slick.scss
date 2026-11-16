@@ -1,0 +1,28 @@
+.slick-arrow,
+.slick-dots button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.slick-arrow {
+  padding: 5px;
+  font-size: calcRem(24);
+
+  &:hover {
+    background-color: palette(yellow);
+    color: palette(black);
+  }
+
+  + .slick-arrow {
+    margin-left: 5px;
+  }
+}
+
+.slick-dots {
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+}

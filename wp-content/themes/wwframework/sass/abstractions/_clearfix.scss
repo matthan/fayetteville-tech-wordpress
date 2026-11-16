@@ -1,0 +1,8 @@
+// Used to reset residual float styles at the end of the container it's applied to
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

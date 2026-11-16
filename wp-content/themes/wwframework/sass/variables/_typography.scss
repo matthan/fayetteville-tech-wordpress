@@ -1,0 +1,16 @@
+
+$base-font-size: 16;
+
+// Font stacks
+$stack-serif: Georgia, Times, 'Times New Roman', _serif;
+$stack-sans-serif: Helvetica, Arial, _sans-serif;
+
+$trocchi: 'Trocchi', $stack-serif;
+$sourcesanspro: 'Source Sans Pro', $stack-sans-serif;
+$montserrat: 'Montserrat', $stack-sans-serif;
+$ultra: 'Ultra', $stack-serif;
+$icomoon: 'icomoon';
+
+$display-font: $trocchi;
+$display-font-alt: $sourcesanspro;
+$body-font: $montserrat;

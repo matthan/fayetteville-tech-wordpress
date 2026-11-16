@@ -1,0 +1,68 @@
+{
+    "key": "group_59de7559f2525",
+    "title": "Panel - Tile Slider",
+    "fields": [
+        {
+            "key": "field_59de757776961",
+            "label": "Tiles",
+            "name": "slider_tiles",
+            "type": "repeater",
+            "value": null,
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 3,
+            "max": 10,
+            "layout": "block",
+            "button_label": "Add Tile",
+            "sub_fields": [
+                {
+                    "key": "field_59de759576962",
+                    "label": "Tile",
+                    "name": "tile",
+                    "type": "clone",
+                    "value": null,
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_59dd687db972c"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1507751354
+}

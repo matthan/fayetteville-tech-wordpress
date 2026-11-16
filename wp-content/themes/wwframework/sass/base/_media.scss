@@ -1,0 +1,16 @@
+article {
+    overflow: hidden;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image captions */
+.wp-caption .wp-caption-text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,76 @@
+.panel-grid-tiles {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  .tiles-wrap {
+    position: relative;
+  }
+
+  .box-outline {
+    @include breakpoint($desktop) {
+      position: absolute;
+      top: 60px;
+      bottom: 90px;
+      border: 10px solid palette(black);
+
+      &:before {
+        content: "";
+        display: block;
+        background-color: palette(grey, light);
+        width: 100%;
+        height: calc(100% - 120px);
+        position: absolute;
+        top: 60px;
+      }
+
+      &.direction-right {
+        left: -60px;
+        right: -100vw;
+
+        &:before {
+          left: 200px;
+        }
+      }
+
+      &.direction-left {
+        right: -60px;
+        left: -100vw;
+
+        &:before {
+          right: 200px;
+        }
+      }
+    }
+  }
+
+  .tiles-grid {
+    position: relative;
+    z-index: z(1);
+    @include breakpoint($phablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .tile {
+    margin-bottom: 30px;
+
+    @include breakpoint($phablet) {
+      &.size-normal,
+      &.size-large {
+        width: 48%; //4% gutters
+      }
+    }
+
+    @include breakpoint($desktop) {
+      &.size-normal {
+        width: 30.66%; //4% gutters
+      }
+
+      &.size-large {
+        width: 65.34%; //4% gutters
+      }
+    }
+  }
+}

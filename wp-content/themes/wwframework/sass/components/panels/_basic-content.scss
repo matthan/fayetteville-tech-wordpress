@@ -1,0 +1,18 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BASIC CONTENT PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-basic-content {
+
+    .container-medium {
+        max-width: 740px;
+    }
+
+    &.bg-yellow {
+        background-color: palette(yellow);
+    }
+    &.bg-blue {
+        color: palette(white);
+        background-color: palette(blue);
+    }
+}

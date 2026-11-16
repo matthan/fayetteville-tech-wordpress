@@ -1,0 +1,51 @@
+.teaser-blog {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $teaser-blog-max-width;
+  transition: box-shadow $duration;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+  @include breakpoint($tablet) {
+    margin: 0 0 60px 20px;
+    width: calc(33.333% - 13.333px);
+
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+
+  .teaser-image {
+    display: block;
+    line-height: 0;
+  }
+
+  .teaser-content-wrap {
+    padding: 16px;
+  }
+
+  .teaser-header {
+    margin-bottom: 12px;
+
+    @include breakpoint($tablet) {
+      min-height: 65px;
+    }
+  }
+
+  .teaser-title {
+    margin-bottom: 0;
+  }
+
+  .teaser-body {
+    font-family: $sourcesanspro;
+    font-size: calcRem(18);
+  }
+
+  .byline {
+    font-size: calcRem(12);
+    color: palette(grey, dark);
+  }
+}

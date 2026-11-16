@@ -1,0 +1,262 @@
+/*-------------------------------------------------------------------------------------------*/
+/* MEDIA / CONTENT PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-media-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .image-side {
+        position: relative;
+        width: 100%;
+        padding-right: 24px;
+        margin-bottom: 30px;
+
+        .image-label {
+            position: absolute;
+            top: -15px;
+            left: 0;
+            padding: 8px 15px 0px 15px;
+            color: palette(white);
+            font-family: $display-font;
+            font-weight: 700;
+            font-size: calcRem(18);
+            line-height: calcRem(22);
+            background-color: palette(black);
+            z-index: 2;
+
+            @include breakpoint($tablet) {
+                font-size: calcRem(24);
+                line-height: calcRem(30);
+            }
+        }
+        .image-box {
+            position: relative;
+            text-align: right;
+
+            &.video-holder {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    content: "\e908";
+                    position: absolute;
+                    font-family: 'icomoon';
+                    font-size: calcRem(60);
+                    color: palette(white);
+                    z-index: 1;
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -24px;
+                    margin-top: -53px;
+
+                    @include breakpoint($phablet) {
+                        font-size: calcRem(80);
+                        margin-left: -31px;
+                        margin-top: -70px;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f8e71c;
+                    mix-blend-mode: multiply;
+                }
+
+                &:hover {
+                    &::before {
+                        text-shadow: 0 0 30px palette(black);
+                    }
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                filter: contrast(1.25) grayscale(1);
+
+                &.yellow {
+
+                }
+
+                &.color {
+                    filter: none;
+                }
+            }
+
+            &.yellow {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f8e71c;
+                    mix-blend-mode: multiply;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 110%;
+                height: 100%;
+                color: palette(yellow);
+                box-shadow: 24px 24px 0px;
+            }
+        }
+
+        @include breakpoint($tablet) {
+            width: 55%;
+        }
+    }
+
+    @include breakpoint($tablet) {
+        margin-bottom: 0px;
+    }
+
+    .content-side {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 24px;
+        z-index: 1;
+
+        .content-box {
+
+            .content-body {
+                margin-top: 30px;
+            }
+        }
+
+        @include breakpoint($tablet) {
+            width: 41%; // 4% gutter
+            padding: 0 15px 0 0;
+            margin-top: 0;
+
+            .content-box {
+                max-width: 460px;
+            }
+        }
+    }
+
+    &.right {
+        flex-direction: row-reverse;
+
+        .image-side {
+            padding-right: 0;
+            padding-left: 24px;
+
+            .image-label {
+                left: inherit;
+                right: 0;
+            }
+            .image-box {
+
+                &::after {
+                    right: inherit;
+                    left: 0;
+                    box-shadow: -24px 24px 0px;
+                }
+            }
+
+            @include breakpoint($tablet) {
+                margin-bottom: 0px;
+            }
+        }
+        .content-side {
+            padding: 0 15px;
+            justify-content: flex-end;
+
+            @include breakpoint($tablet) {
+                padding: 0 0 0 15px;
+            }
+        }
+    }
+
+    &.grey {
+        background-color: palette(grey, lighter);
+        background: linear-gradient(to right, palette(grey, lighter) calc( 45% + 485px), #fff calc( 45% + 485px));
+
+        &.right {
+            background: linear-gradient(to left, palette(grey, lighter) calc( 45% + 485px), #fff calc( 45% + 485px));
+        }
+
+        .image-side {
+
+            .image-box {
+
+                &::after {
+                    color: palette(blue);
+                }
+            }
+        }
+    }
+		
+    &.narrow-grey {	
+        .image-side .image-box::after {
+			width: 100%;
+        	color: palette(blue);
+        }
+    }
+
+    &.dark {
+        background-color: palette(black);
+        background-position: left top;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        color: palette(white);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: palette(black);
+            background: linear-gradient(to left, palette(black) 15%, rgba(0,0,0,0.7) 40%);
+            @include breakpoint($tablet) {
+                background: linear-gradient(to left, palette(black) 35%, rgba(0,0,0,0.5) 65%);
+            }
+        }
+
+        &.right {
+            background-position: right top;
+
+            &::before {
+                background: linear-gradient(to right, palette(black) 15%, rgba(0,0,0,0.7) 40%);
+                @include breakpoint($tablet) {
+                    background: linear-gradient(to right, palette(black) 35%, rgba(0,0,0,0.5) 65%);
+                }
+            }
+        }
+
+        @include breakpoint($tablet) {
+            background-size: 65% auto;
+        }
+    }
+
+    @include breakpoint($tablet) {
+        flex-wrap: no-wrap;
+    }
+}
+
+.grey-bg {
+	background-color: palette(grey, lighter);
+}

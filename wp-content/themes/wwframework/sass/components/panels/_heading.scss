@@ -1,0 +1,20 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BASIC HEADING */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-heading {
+    padding: 40px 0 25px 0;
+    margin-top: 45px;
+    margin-bottom: -15px;
+
+    &.bg-yellow {
+        background-color: palette(yellow);
+        @include gradient-partial(55, right, palette(yellow), palette(white));
+
+    }
+    &.bg-blue {
+        color: palette(white);
+        background-color: palette(blue);
+        @include gradient-partial(55, right, palette(blue), palette(white));
+    }
+}

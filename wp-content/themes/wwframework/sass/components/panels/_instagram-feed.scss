@@ -1,0 +1,23 @@
+.panel-instagram-feed {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  .instagram-pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    margin-bottom: $gutter;
+    width: 100%;
+
+    @include breakpoint($phone) {
+      width: calc(50% - 7.5px);
+    }
+
+    @include breakpoint($tablet) {
+      width: calc(25% - 11.25px); // 15px gutters * 3 gutters = 45 / 4 items = 11.25px
+    }
+  }
+}

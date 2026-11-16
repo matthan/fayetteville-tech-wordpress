@@ -1,0 +1,126 @@
+/*-------------------------------------------------------------------------------------------*/
+/* MASTHEAD */
+/*-------------------------------------------------------------------------------------------*/
+
+.masthead {
+    position: relative;
+    min-height: 100px;
+
+    .masthead-image {
+        background-position: top center;
+        background-size: cover;
+        filter: contrast(1.25) grayscale(1);
+
+        @include breakpoint($tablet) {
+            background-position: center center;
+        }
+    }
+
+    &.masthead-size-small .masthead-image {
+        min-height: 150px;
+
+        @include breakpoint($tablet) {
+            min-height: 280px;
+        }
+        @include breakpoint($desktop) {
+            min-height: 360px;
+        }
+    }
+    &.masthead-size-medium .masthead-image {
+        min-height: 280px;
+
+        @include breakpoint($tablet) {
+            min-height: 420px;
+        }
+        @include breakpoint($desktop) {
+            min-height: 560px;
+        }
+    }
+    &.masthead-size-large .masthead-image {
+        min-height: 280px;
+
+        @include breakpoint($tablet) {
+            min-height: 560px;
+        }
+        @include breakpoint($desktop) {
+            min-height: 720px;
+        }
+    }
+
+    .masthead-box {
+        width: 100%;
+        padding: 40px $gutter;
+        background-color: palette(white);
+
+        .masthead-headings {
+            position: relative;
+            z-index: z(1);
+        }
+
+        .masthead-heading,
+        .masthead-subheading {
+            margin: 0;
+
+            .h4 {
+                margin-bottom: 5px;
+            }
+        }
+
+        @include breakpoint($tablet) {
+            position: absolute;
+        }
+    }
+
+    &.masthead-type-standard .masthead-box {
+        @include breakpoint($tablet) {
+            bottom: 0;
+            left: 0;
+            width: calc(470px + 50%);
+            margin-top: 100px;
+        }
+
+        .masthead-headings {
+            @include breakpoint($tablet) {
+                max-width: 690px;
+                margin-left: calc(100% - #{$tablet} + (#{$gutter} * 3));
+            }
+        }
+    }
+
+    &.masthead-type-image-heading .masthead-box {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $tablet;
+        text-align: center;
+
+        @include breakpoint($tablet) {
+            position: absolute;
+            z-index: z(1);
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: calc(485px + 50%);
+            margin-top: 100px;
+        }
+    }
+
+    .masthead-title {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 0;
+    }
+}
+.home .masthead {
+
+    .masthead-heading {
+        display: inline-block;
+        background: black;
+        color: white;
+        padding: 30px 24px 10px 24px;
+        width: auto;
+        margin-top: -110px;
+        margin-bottom: 47px;
+        margin-left: -15px;
+        max-width: 575px;
+    }
+}

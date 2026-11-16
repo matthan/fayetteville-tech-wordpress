@@ -1,0 +1,43 @@
+.header-social-links {
+    width: 100%;
+    background-color: palette(black);
+
+    @include breakpoint($tablet) {
+        position: absolute;
+        right: 0;
+        top: 200px;
+        width: auto;
+    }
+    @include breakpoint($desktop) {
+        top: 350px;
+    }
+
+    .social {
+        margin: 0;
+        padding: 5px 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            padding: 0;
+            text-align: center;
+
+            @include breakpoint($tablet) {
+                display: block;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                color: palette(white);
+                padding: 5px 15px 3px 15px;
+                transition: background-color $duration ease-in-out;
+
+                &:hover {
+                    color: palette(black);
+                    background-color: palette(yellow);
+                }
+            }
+        }
+    }
+}

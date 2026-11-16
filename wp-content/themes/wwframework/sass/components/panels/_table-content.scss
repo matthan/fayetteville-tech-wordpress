@@ -1,0 +1,88 @@
+/*-------------------------------------------------------------------------------------------*/
+/* TABLE CONTENT PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-table-content {
+    @include gradient-partial(42, right, palette(yellow), palette(white));
+
+    &.right {
+        @include gradient-partial(42, left, palette(yellow), palette(white));
+
+        h3, h4 {
+            text-align: right;
+        }
+    }
+
+    table {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        box-shadow: $box-shadow;
+        overflow: auto;
+
+        tr {
+            border: 1px solid palette(grey, lighter);
+            padding: 5px;
+            background-color: palette(white);
+
+            &:nth-child(odd) {
+                background-color: palette(grey, lighter);
+            }
+        }
+        th, td {
+            border-top: 1px solid palette(grey, lighter);
+            padding: 4px 8px;
+        }
+        th {
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        td {
+            padding: 10px 15px;
+        }
+        dl {
+            margin-bottom: 30px;
+        }
+        dd {
+            margin-bottom: 10px;
+        }
+
+        //@include breakpoint($phablet) {
+        //    border: none;
+        //
+        //    thead {
+        //        display: none;
+        //    }
+        //    tr {
+        //        margin-bottom: 10px;
+        //        display: block;
+        //        /* border-bottom: 2px solid #ddd; */
+        //        background-color: #ffffff;
+        //    }
+        //    td {
+        //        display: block;
+        //        font-size: 13px;
+        //        /* border-bottom: 1px dotted #ccc; */
+        //        background-color: #ffffff;
+        //    }
+        //    td:first-child {
+        //        border-top: 0;
+        //    }
+        //    td:last-child {
+        //        border-bottom: 0;
+        //    }
+        //    td:before {
+        //        content: attr(data-label);
+        //        float: left;
+        //        text-transform: uppercase;
+        //        font-weight: bold;
+        //    }
+        //}
+
+    }
+}

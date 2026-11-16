@@ -1,0 +1,36 @@
+.back-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 0px;
+    display: inline-block;
+    width: 70px;
+    background-color: palette(yellow);
+    padding: 4px 6px 6px 6px;
+    line-height: calcRem(12);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, background-color $duration ease-in-out;
+    z-index: 1000;
+    //box-shadow: 0 0 30px palette(white);
+
+    &.visible {
+        //display: inline-block;
+        opacity: 1;
+    }
+
+    .icon {
+        display: block;
+        font-size: calcRem(26);
+    }
+    .text {
+        //display: none;
+        font-family: $display-font-alt;
+        font-weight: 700;
+        font-size: calcRem(13);
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background-color: palette(yellow, dark);
+    }
+}

@@ -1,0 +1,74 @@
+.panel-persona-filter {
+    padding-left: $gutter;
+    padding-right: $gutter;
+    @include gradient-partial(55, left, palette(yellow), palette(white));
+
+    @include breakpoint($phablet) {
+        .ginput_container_select::after {
+            right: 30px;
+        }
+    }
+
+    @include breakpoint($desktop) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    label {
+        display: block;
+        font-size: calcRem(22);
+        line-height: calcRem(16);
+
+        @include breakpoint($phablet) {
+            display: inline-block;
+        }
+    }
+
+    select {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        @include breakpoint($phablet) {
+            margin: 15px;
+        }
+
+        &[disabled] {
+            color: palette(grey);
+            opacity: 0.4;
+        }
+    }
+
+    input[type="submit"] {
+        float: none;
+        margin: 16px 0 0;
+        background-color: palette(black);
+        color: palette(white);
+        transition: opacity $duration;
+
+        &[disabled] {
+            opacity: 0;
+        }
+    }
+
+    select,
+    .pf-input-wrap {
+        font-family: $display-font-alt;
+        font-size: calcRem(20);
+        font-weight: 700;
+
+        @include breakpoint($tablet) {
+            font-size: calcRem(24);
+        }
+    }
+
+    .pf-input-wrap {
+        @include breakpoint($phablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .pf-inline-text {
+        display: inline-block;
+    }
+}

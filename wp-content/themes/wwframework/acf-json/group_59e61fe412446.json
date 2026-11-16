@@ -1,0 +1,41 @@
+{
+    "key": "group_59e61fe412446",
+    "title": "Panel - Blog Feed (Teaser)",
+    "fields": [
+        {
+            "key": "field_59e620c9d4eb2",
+            "label": "Blog Feed (Teaser)",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "No fields necessary – panel will display a blog feed of the 3 most recently published blog posts, along with a link to the Blog archive.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1508253957
+}

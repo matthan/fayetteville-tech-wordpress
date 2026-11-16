@@ -1,0 +1,32 @@
+.single-post,
+.single-news,
+.single-tribe_events {
+  .flex-wrap {
+    @include breakpoint($tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  main {
+    font-family: $sourcesanspro;
+    font-size: calcRem(18);
+
+    @include breakpoint($tablet) {
+      width: calc(66.666% - 2%); //4% gutter
+    }
+  }
+
+  aside {
+    margin-top: 30px;
+
+    @include breakpoint($tablet) {
+      margin-top: 0;
+      width: calc(33.333% - 2%); //4% gutter
+    }
+  }
+
+  .container {
+    padding: 0 $gutter;
+  }
+}

@@ -1,0 +1,95 @@
+/*-------------------------------------------------------------------------------------------*/
+/* HEADER */
+/*-------------------------------------------------------------------------------------------*/
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: z(5);
+    height: $header-height;
+    background-color: palette(white);
+    transition: top .2s ease-in-out;
+    &.nav-up {
+        top: (0 - $header-height - 28);
+    }
+    @include breakpoint($tablet) {
+        position: relative;
+        &.nav-up {
+            top: auto;
+        }
+    }
+}
+
+.admin-bar #header {
+    top: 0;
+    &.nav-up {
+        top: 0;
+    }
+    @media( min-width: 601px ) {
+        top: 46px;
+        &.nav-up {
+            top: (46px - $header-height);
+        }
+    }
+    @media( min-width: 783px ) {
+        top: 32px;
+        &.nav-up {
+            top: (32px - $header-height);
+        }
+    }
+    @include breakpoint($tablet) {
+        top: auto;
+        &.nav-up {
+            top: auto;
+        }
+    }
+}
+
+.home-link {
+    position: relative;
+    z-index: z(1);
+    display: inline-block;
+    padding: 15px 25px 7px 27px;
+    height: $header-height + 28px;
+    vertical-align: top;
+    background-color: palette(yellow);
+
+    img {
+        width: auto;
+        max-height: 68px;
+    }
+}
+
+.header-slogan {
+    position: relative;
+    z-index: z(1);
+    display: none;
+    margin-left: 19px;
+    font-family: $display-font;
+    font-weight: 700;
+    height: 68px;
+    line-height: 68px;
+
+    .mobile-menu-is-open & {
+        color: palette(white);
+    }
+
+    @include breakpoint($phablet) {
+        display: inline-block;
+    }
+}
+
+.page-content { // Use .page-content as main page container wrap, as actual main tag may appear in different place (main and aside for sidebar layouts like Blog pages, etc.)
+    margin: $header-height 0;
+
+    .page & {
+        margin-bottom: 0;
+    }
+
+    //@include breakpoint($tablet) {
+        .page & { // Need to keep margins in other contexts like Blog pages
+            margin-top: 0;
+        }
+    //}
+}

@@ -1,0 +1,56 @@
+.search-form {
+    margin-bottom: 20px;
+
+    .submit-wrap {
+        position: relative;
+        font-size: 0;
+        width: 60px;
+        overflow: hidden;
+    }
+
+    .flex-wrap,
+    input[type="submit"] {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0;
+    }
+
+    .input-wrap {
+        display: flex;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: $display-font-alt;
+        font-weight: 700;
+        font-size: calcRem(20);
+        color: palette(white);
+        text-align: right;
+    }
+
+    input[type="text"] {
+        padding: 20px 15px;
+        font-size: calcRem(20);
+        border-right: none;
+    }
+
+    .flex-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .icon-search {
+        font-size: calcRem(24);
+    }
+}

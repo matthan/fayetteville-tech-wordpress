@@ -1,0 +1,56 @@
+/*-------------------------------------------------------------------------------------------*/
+/* OFFICE CONTACT INFO PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-office-contact-info {
+    padding: $panel-margin-vertical-phablet 0 0 0;
+
+    .col-o {
+        width: 100%;
+        margin-right: 15px;
+
+        @include breakpoint($phone) {
+            width: 46%;
+        }
+
+        @include breakpoint($phablet) {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint($desktop) {
+            width: auto;
+            max-width: 25%
+        }
+    }
+
+    h3 {
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            background-color: palette(yellow);
+            background: linear-gradient(to bottom, transparent 9px, palette(yellow) 9px);
+            text-decoration: none;
+        }
+    }
+
+    .contact-info {
+        font-size: calcRem(12);
+        margin-bottom: 15px;
+
+        .icon {
+            font-size: calcRem(28);
+            margin-bottom: 4px;
+        }
+    }
+
+    .icon-img {
+        max-height: 40px;
+    }
+}

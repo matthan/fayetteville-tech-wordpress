@@ -1,0 +1,9 @@
+.archive-blog {
+  .feed {
+    padding: 0 $gutter;
+  }
+
+  @include breakpoint($tablet) {
+    margin: $header-height 0;
+  }
+}

@@ -1,0 +1,40 @@
+/*-------------------------------------------------------------------------------------------*/
+/* 2 / 3 COLUMN PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-basic-content-w-side {
+
+    &.bg-yellow {
+        background-color: palette(yellow);
+        @include gradient-partial(42, right, palette(yellow), palette(white));
+
+        &.w-sidebar {
+            @include gradient-partial(55, right, palette(yellow), palette(white));
+        }
+    }
+
+    .sidebar {
+
+        .sidebar-links {
+            padding: 10px 8px;
+            background-color: palette(yellow);
+
+            a {
+                display: inline-block;
+                width: 100%;
+                padding: 2px 7px;
+                box-decoration-break: clone;
+                font-family: $body-font;
+                font-size: calcRem(14);
+                line-height: calcRem(18);
+                text-decoration: underline;
+
+                &:hover {
+                    background-color: palette(white);
+                    background: linear-gradient(to top, palette(yellow) 9px, palette(white) 9px);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

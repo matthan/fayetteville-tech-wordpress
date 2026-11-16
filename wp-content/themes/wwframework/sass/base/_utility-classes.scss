@@ -1,0 +1,89 @@
+.hide {
+    display: none !important;
+}
+
+/* Selective hides */
+// Specific ranges
+.hide-mobile {
+    @media (min-width: 0) and (max-width: #{$phablet - 1}) {
+        display: none !important;
+    }
+}
+
+.hide-phablet {
+    @media (min-width: $phablet) and (max-width: #{$tablet - 1}) {
+        display: none !important;
+    }
+}
+
+.hide-tablet {
+    @media (min-width: $tablet) and (max-width: #{$desktop - 1}) {
+        display: none !important;
+    }
+}
+
+// Breakpoint and up
+.hide-phablet-up {
+    @include breakpoint($phablet) {
+        display: none !important;
+    }
+}
+
+.hide-tablet-up {
+    @include breakpoint($tablet) {
+        display: none !important;
+    }
+}
+
+.hide-desktop-up {
+    @include breakpoint($desktop) {
+        display: none !important;
+    }
+}
+
+// Breakpoint and down
+.hide-mobile-down {
+    @media (min-width: 0) and (max-width: #{$phablet - 1}) {
+        display: none !important;
+    }
+}
+
+.hide-phablet-down {
+    @media (min-width: 0) and (max-width: #{$tablet - 1}) {
+        display: none !important;
+    }
+}
+
+.hide-tablet-down {
+    @media (min-width: 0) and (max-width: #{$desktop - 1}) {
+        display: none !important;
+    }
+}
+
+// https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+%sr-text {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.sr-text,
+.screen-reader-text {
+    @extend %sr-text;
+}
+
+/* Alignments */
+.alignleft {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 30px;
+}

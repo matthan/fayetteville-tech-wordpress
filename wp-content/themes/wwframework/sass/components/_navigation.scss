@@ -1,0 +1,380 @@
+/*-------------------------------------------------------------------------------------------*/
+/* NAVIGATION */
+/*-------------------------------------------------------------------------------------------*/
+
+
+.navigation {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+}
+
+.primary-nav {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    font-size: 0;
+    text-align: right;
+
+    @include breakpoint($desktop) {
+        margin-top: 0;
+        background-color: palette(white);
+        position: relative;
+        z-index: z(1);
+    }
+
+    &,
+    a {
+        color: palette(white);
+    }
+
+    li,
+    button {
+        display: block;
+    }
+
+    a {
+        display: inline-block;
+
+        @include breakpoint($desktop) {
+            display: block;
+        }
+    }
+
+    li {
+        margin: 0;
+        position: relative;
+
+        > a,
+        > button,
+        > .dropdown-text {
+            padding: 0 $gutter;
+        }
+
+        > .dropdown-text {
+            width: 100%;
+            text-align: right;
+            font-weight: normal;
+            line-height: inherit;
+            cursor: default;
+        }
+    }
+
+    > li { // Begin primary links/dropdowns
+        margin-bottom: 15px;
+        font-family: $display-font-alt;
+        font-size: calcRem(24);
+
+        > a,
+        > button {
+            font-family: $display-font-alt;
+            font-weight: 700;
+        }
+
+        > .dropdown-text {
+            font-size: calcRem(18);
+            text-transform: uppercase;
+            color: palette(grey);
+            letter-spacing: 2px;
+        }
+
+        @include breakpoint($desktop) {
+            display: inline-block;
+            margin-bottom: 0;
+            border-left: 1px solid palette(grey, lighter);
+            height: $header-height;
+
+            > a,
+            > button,
+            > .dropdown-text {
+                font-size: calcRem(16);
+                text-transform: none;
+                padding-left: 40px;
+                padding-right: 40px;
+                letter-spacing: normal;
+                color: palette(black);
+                font-weight: 700;
+                line-height: 66px;
+            }
+
+            > a,
+            > button,
+            > .dropdown-text {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    height: 1px;
+                    width: 0;
+                    background-color: palette(black);
+                    top: 45px;
+                    left: 40px;
+                    transition: width $duration;
+                }
+            }
+
+            > .search-toggle.clicked:before {
+                width: calc(100% - (40px * 2));
+            }
+
+            > .dropdown-text {
+                &:after {
+                    display: inline-block;
+                    content: "\e906";
+                    font-family: $icomoon;
+                    font-size: calcRem(8);
+                    margin-left: 5px;
+                    vertical-align: middle;
+                    transition: transform $duration;
+                }
+            }
+
+            // Desktop hover/focus states
+            &:hover {
+                > a:before,
+                > button:before,
+                > .dropdown-text:before {
+                    width: calc(100% - (40px * 2));
+                }
+
+                > .dropdown-text:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            > a[aria-expanded="true"]:before,
+            > button[aria-expanded="true"]:before {
+                width: calc(100% - (40px * 2));
+            }
+
+            > .dropdown-text[aria-expanded="true"]:after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &.icon-item {
+            a {
+                padding-left: 20px;
+                padding-right: 20px;
+
+                span {
+                    font-size: 28px;
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    color: palette(yellow, dark);
+                }
+            }
+        }
+    }
+
+    > li > .navbar-subnav { // Begin secondary links
+        font-size: calcRem(20);
+
+        a {
+            transition: color $duration, background-color $duration;
+        }
+
+        > li > a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        > li:hover > a,
+        > li:hover > .dropdown-text,
+        > li.current-menu-item > a,
+        > li > a:focus {
+            background-color: palette(yellow);
+            color: palette(black);
+        }
+
+        @include breakpoint($desktop) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border-top: 1px solid palette(grey, light);
+            min-width: 100%;
+            background-color: palette(white);
+            color: palette(black);
+
+            > li > a {
+                padding: 12px 16px;
+                font-size: calcRem(18);
+                color: palette(black);
+                white-space: nowrap;
+            }
+
+            > li:hover > a,
+            > li:hover > .dropdown-text,
+            > li.current-menu-item > a,
+            > li > a:focus {
+                background-color: palette(yellow);
+                color: palette(black);
+            }
+        }
+    }
+
+    // Toggling subnav
+    > li:hover > .navbar-subnav,
+    .navbar-subnav[aria-expanded="true"] {
+        @include breakpoint($desktop) {
+            display: block;
+        }
+    }
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgba(palette(black), .9);
+    transition: top $duration, opacity $duration;
+    @include breakpoint($desktop) {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        float: right;
+        background-color: transparent;
+        overflow: visible;
+    }
+}
+
+.admin-bar .header-nav {
+    top: 32px;
+    @include breakpoint($desktop) {
+        top: auto;
+    }
+}
+
+.header-nav-visible {
+    display: block;
+    @include breakpoint($desktop) {
+        display: inherit;
+    }
+}
+
+.header-nav-opaque {
+    opacity: 1;
+}
+
+.mobile-menu-is-open {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    @include breakpoint($desktop) {
+        overflow: visible;
+        height: auto;
+    }
+}
+
+.mobile-menu-header {
+    display: block;
+    background-color: palette(black);
+    padding: 0 $gutter;
+    width: 100%;
+    height: $header-height;
+
+    .close-mobile-menu {
+        float: right;
+        margin-top: 13px;
+        margin-right: -5px;
+        font-size: 2.4rem;
+        cursor: pointer;
+        color: palette(white);
+    }
+
+    @include breakpoint($desktop) {
+        display: none;
+    }
+}
+
+.primary-nav {
+    display: block;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    > ul {
+        > li {
+            display: block;
+            position: relative;
+            padding: 5px $gutter;
+        }
+    }
+    > ul ul.sub-menu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        margin-top: 25px;
+        padding: 10px $gutter;
+        text-align: center;
+        transition: opacity $duration;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -#{$gutter};
+            left: 50%;
+            width: 0;
+            transform: translateX(-50%);
+            z-index: z(1);
+        }
+        li {
+            display: block;
+            float: left;
+            list-style: none;
+            text-transform: none;
+        }
+    }
+    @include breakpoint($desktop) {
+        > ul {
+            > li {
+                position: relative;
+                display: inline-block;
+                float: left;
+            }
+        }
+        > ul li.menu-item-has-children:hover .sub-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.mobile-toggle {
+    display: inline-block;
+    float: right;
+
+    .navbar-toggle {
+        display: block;
+        float: right;
+        margin: 16px $gutter 0 0;
+        padding: 0;
+        font-size: calcRem(32);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    @include breakpoint($desktop) {
+        .navbar-toggle {
+            display: none;
+        }
+    }
+}

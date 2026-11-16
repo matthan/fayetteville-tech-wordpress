@@ -1,0 +1,29 @@
+/*-------------------------------------------------------------------------------------------*/
+/* HORIZONTAL RULE PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-horizontal-rule {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+	@include breakpoint($phablet) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	
+	hr {
+		width: 70%;
+		height: 8px;
+		border: none;
+		
+		&.yellow {
+			background-color: palette(yellow);
+		}
+		&.blue {
+			background-color: palette(blue);
+		}
+		&.grey {
+			background-color: palette(grey, light);
+		}
+	}
+}

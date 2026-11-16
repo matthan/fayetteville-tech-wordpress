@@ -1,0 +1,32 @@
+/*!
+Theme Name: Walk West Framework
+Theme URI: https://walkwest.com/
+Version: 2.0
+Description: Designed by <a href="https://walkwest.com/">Walk West</a>.
+Author: Walk West
+Author URI: https://walkwest.com/
+*/
+
+// Import external CSS
+@import url("libs/icomoon-custom/style.css");
+
+// Import external Sass libraries
+@import "../libs/bower_libs/breakpoint-sass/stylesheets/breakpoint";
+
+// Variables
+@import "variables/**/*";
+
+// Abstractions
+@import "abstractions/**/*";
+
+// Overrides
+@import "overrides/**/*";
+
+// Base
+@import "base/**/*";
+
+// Layout
+@import "layout/**/*";
+
+// Components
+@import "components/**/*";

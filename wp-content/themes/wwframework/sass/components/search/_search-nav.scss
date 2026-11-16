@@ -1,0 +1,38 @@
+.search-form-nav {
+    padding: 0 $gutter;
+
+    @include breakpoint($desktop) {
+        height: 0px;
+        //transition: height $duration ease-in-out;
+        overflow: hidden;
+
+        &.active {
+            height: 58px;
+        }
+    }
+
+    .input-wrap {
+        justify-content: flex-end;
+    }
+
+    .submit-wrap {
+        background-color: palette(yellow);
+        transition: background-color ease-in-out $duration;
+
+        &:hover {
+            background-color: palette(white);
+        }
+    }
+
+    input[type="text"] {
+        max-width: 400px;
+        background-color: transparent;
+        color: palette(white);
+        //border: 1px solid palette(white);
+        border-right: 0;
+
+        @include breakpoint($desktop) {
+            background-color: palette(grey, dark);
+        }
+    }
+}

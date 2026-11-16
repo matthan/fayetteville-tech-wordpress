@@ -1,0 +1,16 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BASIC CONTENT W/ SIDE PANEL */
+/*-------------------------------------------------------------------------------------------*/
+
+.panel-two-three-column {
+
+    &.bg-yellow {
+        background-color: palette(yellow);
+        @include gradient-partial(55, right, palette(yellow), palette(white));
+    }
+    &.bg-blue {
+        color: palette(white);
+        background-color: palette(blue);
+        @include gradient-partial(55, right, palette(blue), palette(white));
+    }
+}

@@ -1,0 +1,34 @@
+.panel-tile-slider {
+  .tile {
+    margin: 0 15px;
+  }
+
+  .pager-arrows {
+    margin-top: 30px;
+    text-align: center;
+
+    button {
+      border-radius: 50%;
+      font-size: calcRem(16);
+      width: 40px;
+      height: 40px;
+    }
+
+    i {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include breakpoint($phablet) {
+      margin-top: 50px;
+    }
+
+    @include breakpoint($desktop) {
+      margin-right: 50px;
+      text-align: right;
+    }
+  }
+}
